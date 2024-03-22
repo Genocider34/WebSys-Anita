@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #151612;
+  color: #efefeb;
+  margin: 1em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+img {
+  width: 25%;
+}
+
+.border {
+  border: 1px solid #bebfaf;
+  width: 80%;
+  margin: 1em;
+}
+
+h1 {
+  color: #bebfaf;
+}
+
+video {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 4px rgb(0, 0, 0, 0.4);
+}
+
+article {
+  padding: 1em 5em;
+  line-height: 2;
+  text-align: center;
+}
