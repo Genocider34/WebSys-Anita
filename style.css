@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Montez:700|Montez:400");
+
 body {
   display: flex;
   flex-direction: column;
@@ -7,15 +9,20 @@ body {
   background-color: #151612;
   color: #efefeb;
   margin: 1em;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  width: 40%;
+  box-shadow: 2px 3px 4px rgb(0, 0, 0, 0.7);
 }
 
-img {
-  width: 25%;
+main img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .border {
@@ -25,17 +32,92 @@ img {
 }
 
 h1 {
+  text-align: center;
   color: #bebfaf;
 }
 
+h2 {
+  font-family: "Montez";
+  font-size: 2.5rem;
+}
+
 video {
-  width: 500px;
+  width: 700px;
   border-radius: 10px;
   box-shadow: 2px 3px 4px rgb(0, 0, 0, 0.4);
 }
 
-article {
-  padding: 1em 5em;
-  line-height: 2;
+#anita-img {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px dashed #efefeb;
+}
+
+p {
+  color: black;
+  margin: 0.5em;
+  background-color: #c8bea0;
+  border-radius: 10px;
+  padding: 1em;
   text-align: center;
+}
+
+.highlight {
+  color: #ac7b87;
+  font-weight: 700;
+}
+
+#info-artist {
+  max-width: 800px;
+  width: 100%;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5em;
+  line-height: 2;
+  margin: 1.5em;
+  width: 100%;
+}
+
+.border-dashed {
+  border: 2px dashed #efefeb;
+  width: 90%;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 960px) {
+  #anita-img {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    width: 70%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #name {
+    font-size: 1rem;
+  }
+
+  article {
+    width: 700px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  article {
+    width: 450px;
+  }
 }
